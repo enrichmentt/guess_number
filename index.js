@@ -10,7 +10,9 @@ let guess = prompt('Введите число');
 let attempt = 1;
 
 while (true) {
-    if (guess > number) {
+    if (guess == null) {
+        break;
+    } else if (guess > number) {
         alert("Заданное число меньше");
         guess = prompt('Введите число');
         attempt++;
@@ -20,6 +22,6 @@ while (true) {
         attempt++;
     } else {
         alert("Вы угадали число c " + attempt + " раза");
-        break
+        break;
     }
 }
